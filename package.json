@@ -14,15 +14,16 @@
     "type": "git",
     "url": "https://github.com/johnotander/get-css-classes.git"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/johnotander/get-css-classes/issues"
   },
   "homepage": "https://github.com/johnotander/get-css-classes",
-  "dependencies": {},
+  "dependencies": {
+    "has-class-selector": "^1.0.0",
+    "specificity": "^0.1.4"
+  },
   "devDependencies": {
     "mocha": "*"
   }

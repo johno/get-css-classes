@@ -1,6 +1,4 @@
-# get-css-classes
-
-[![Build Status](https://secure.travis-ci.org/johnotander/get-css-classes.png?branch=master)](https://travis-ci.org/johnotander/get-css-classes)
+# get-css-classes [![Build Status](https://secure.travis-ci.org/johnotander/get-css-classes.png?branch=master)](https://travis-ci.org/johnotander/get-css-classes)
 
 Get CSS classes from a selector string.
 
@@ -15,7 +13,7 @@ npm install --save get-css-classes
 ```javascript
 var getCssClasses = require('get-css-classes');
 
-getCssClasses();  // => true
+getCssClasses('.some#selector li:first .foo');  // => ['.some', '.foo']
 ```
 
 ## License
