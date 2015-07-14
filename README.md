@@ -13,7 +13,7 @@ npm install --save get-css-classes
 ```javascript
 var getCssClasses = require('get-css-classes');
 
-getCssClasses('.some#selector li:first .foo');  // => ['.some', '.foo']
+getCssClasses('.some#selector li:first-child .foo');  // => ['.some', '.foo']
 ```
 
 ## License
