@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/johnotander/get-css-classes",
   "dependencies": {
-    "has-class-selector": "^1.0.0",
-    "specificity": "^0.1.4"
+    "css-selector-tokenizer": "^0.5.4"
   },
   "devDependencies": {
     "mocha": "*"

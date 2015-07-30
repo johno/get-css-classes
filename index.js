@@ -1,19 +1,16 @@
 'use strict'
 
-var specificity = require('specificity')
-var hasClassSelector = require('has-class-selector')
+var SelectorTokenizer = require('css-selector-tokenizer')
 
 module.exports = function getCssClasses(selector) {
   if (typeof selector !== 'string') {
     throw new TypeError('get-css-classes expects a string')
   }
 
-  return specificity.calculate(selector)[0].parts.filter(function(selectorPart) {
-    return selectorPart.type === 'b'
-  }).filter(function(cssClass) {
-    // Sometimes it isn't actually a CSS class
-    return hasClassSelector(cssClass.selector)
-  }).map(function(cssClass) {
-    return cssClass.selector
+  var tokens = SelectorTokenizer.parse(selector).nodes[0] || { nodes: [] }
+  return tokens.nodes.filter(function(token) {
+    return token.type === 'class'
+  }).map(function(classToken) {
+    return '.' + classToken.name
   })
 }
