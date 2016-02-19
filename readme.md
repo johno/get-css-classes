@@ -15,7 +15,7 @@ var getCssClasses = require('get-css-classes');
 
 getCssClasses('.some#selector li:first-child .foo:first-child');  // => ['.some', '.foo']
 
-getCssClasses('.some .selector:first-child', { keepPseudos: true })  // => ['.some', '.selector:first-child']
+getCssClasses('.some#other .selector:first-child', { keepPseudos: true })  // => ['.some', '.selector:first-child']
 ```
 
 #### Options
