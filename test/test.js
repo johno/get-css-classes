@@ -27,3 +27,14 @@ describe('get-css-classes', function() {
     })
   })
 })
+
+describe('get-css-classes keepPseudos: true', function() {
+  it('should return the classes with pseudos', function() {
+    assert.deepEqual(
+      getCssClasses('.class::after .other .one:first-child', {
+        keepPseudos: true
+      }),
+      ['.class::after', '.other', '.one:first-child']
+    )
+  })
+})

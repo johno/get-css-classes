@@ -10,18 +10,16 @@
   "scripts": {
     "test": "mocha test"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/get-css-classes.git"
-  },
-  "keywords": [],
+  "repository": "johnotander/get-css-classes",
+  "keywords": [
+    "css",
+    "classes",
+    "selector"
+  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/get-css-classes/issues"
-  },
-  "homepage": "https://github.com/johnotander/get-css-classes",
   "dependencies": {
-    "css-selector-tokenizer": "^0.5.4"
+    "css-selector-tokenizer": "^0.5.4",
+    "lodash": "^4.5.0"
   },
   "devDependencies": {
     "mocha": "*"
