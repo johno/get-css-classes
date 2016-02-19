@@ -13,8 +13,14 @@ npm install --save get-css-classes
 ```javascript
 var getCssClasses = require('get-css-classes');
 
-getCssClasses('.some#selector li:first-child .foo');  // => ['.some', '.foo']
+getCssClasses('.some#selector li:first-child .foo:first-child');  // => ['.some', '.foo']
+
+getCssClasses('.some .selector:first-child', { keepPseudos: true })  // => ['.some', '.selector:first-child']
 ```
+
+#### Options
+
+- `keepPseudos`: _Boolean_ - Whether to keep pseudo elements and classes. Default: `false`
 
 ## License
 
